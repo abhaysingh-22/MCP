@@ -1,0 +1,177 @@
+.container {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 12px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.section {
+    margin-top: 24px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    padding: 0 16px;
+    margin-bottom: 12px;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 12px;
+    margin: 0 16px;
+    overflow: hidden;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #f8f8f8;
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #e8f0fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #1a73e8;
+}
+
+.menu-text {
+    flex: 1;
+    font-size: 16px;
+    color: #000;
+}
+
+.menu-arrow {
+    color: #999;
+    font-size: 18px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 0 16px 24px 16px;
+    cursor: pointer;
+}
+
+.language-label {
+    font-size: 16px;
+    color: #000;
+}
+
+.language-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 16px;
+}
+
+.search-container {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px center;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #666;
+    font-size: 12px;
+}
+
+.nav-item:hover {
+    color: #1a73e8;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.content-wrapper {
+    padding-bottom: 80px;
+}
