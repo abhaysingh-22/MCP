@@ -1,177 +1,235 @@
-.container {
-    width: 100%;
-    max-width: 390px;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F5F5F7;
+}
+
+.app-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #F5F5F7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+/* Header */
 .header {
+    background-color: #F5F5F7;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
-    padding: 16px;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .back-button {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
-    padding: 8px;
-    margin-right: 12px;
+    padding: 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
 }
 
 .header-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: #000;
+    color: #1D1D1F;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 0 20px 20px;
 }
 
 .section {
-    margin-top: 24px;
+    margin-bottom: 32px;
 }
 
 .section-title {
     font-size: 14px;
     font-weight: 600;
-    color: #666;
-    padding: 0 16px;
+    color: #6E6E73;
     margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.menu-card {
-    background-color: white;
+/* Card */
+.card {
+    background-color: #FFFFFF;
     border-radius: 12px;
-    margin: 0 16px;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
+/* Menu Item */
 .menu-item {
     display: flex;
     align-items: center;
-    padding: 16px;
-    border-bottom: 1px solid #f0f0f0;
+    justify-content: space-between;
+    padding: 14px 16px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.menu-item:last-child {
-    border-bottom: none;
-}
-
 .menu-item:hover {
-    background-color: #f8f8f8;
+    background-color: #F9F9F9;
 }
 
-.icon-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: #e8f0fe;
+.menu-item-border {
+    border-bottom: 1px solid #E5E5EA;
+}
+
+.menu-item-left {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+    gap: 12px;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    color: #1a73e8;
-}
-
-.menu-text {
-    flex: 1;
-    font-size: 16px;
-    color: #000;
-}
-
-.menu-arrow {
-    color: #999;
-    font-size: 18px;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    background-color: white;
-    border-radius: 12px;
-    margin: 0 16px 24px 16px;
-    cursor: pointer;
-}
-
-.language-label {
-    font-size: 16px;
-    color: #000;
-}
-
-.language-value {
+.menu-item-right {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #666;
-    font-size: 16px;
 }
 
+.icon-container {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.menu-item-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1D1D1F;
+}
+
+.language-text {
+    font-size: 16px;
+    color: #86868B;
+}
+
+.chevron {
+    font-size: 24px;
+    color: #C7C7CC;
+    font-weight: 300;
+}
+
+/* Search Container */
 .search-container {
-    padding: 0 16px;
+    position: relative;
     margin-bottom: 16px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #86868B;
+    margin-right: 8px;
 }
 
 .search-input {
-    width: 100%;
-    padding: 12px 16px 12px 40px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 12px center;
-}
-
-.search-input:focus {
+    flex: 1;
+    border: none;
     outline: none;
-    border-color: #1a73e8;
+    font-size: 16px;
+    color: #1D1D1F;
+    background: transparent;
 }
 
+.search-input::placeholder {
+    color: #86868B;
+}
+
+/* Bottom Navigation */
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border-top: 1px solid #e0e0e0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    width: 100%;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-around;
-    padding: 12px 0;
-    max-width: 390px;
-    margin: 0 auto;
+    padding: 8px 0 20px;
+    border-top: 1px solid #E5E5EA;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .nav-item {
+    background: none;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
     cursor: pointer;
-    border: none;
-    background: none;
-    color: #666;
-    font-size: 12px;
+    padding: 4px 12px;
+    transition: opacity 0.2s;
 }
 
 .nav-item:hover {
-    color: #1a73e8;
+    opacity: 0.7;
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
+    font-size: 24px;
+    color: #86868B;
 }
 
-.content-wrapper {
-    padding-bottom: 80px;
+.nav-label {
+    font-size: 11px;
+    color: #86868B;
+    font-weight: 500;
+}
+
+.nav-item-active .nav-icon,
+.nav-item-active .nav-label {
+    color: #007AFF;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app-container {
+        max-width: 100%;
+    }
+    
+    .bottom-nav {
+        max-width: 100%;
+    }
 }
